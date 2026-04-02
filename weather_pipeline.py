@@ -37,3 +37,6 @@ cur.close()
 conn.close()
 
 print("Data inserted")
+
+if __name__ == "__main__":
+    print("Running pipeline...")
