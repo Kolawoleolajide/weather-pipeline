@@ -18,9 +18,9 @@ record = (
     data["weather"][0]["description"]
 )
 
-conn = psycopg2.connect(
-    "postgresql://postgres.byntkxqnjshttsyrgczo:Ball2347962%25@aws-0-eu-west-1.pooler.supabase.com:6543/postgres?sslmode=require"
-)
+import os
+
+conn = psycopg2.connect(os.getenv("DB_URL"))
 
 
 cur = conn.cursor()
