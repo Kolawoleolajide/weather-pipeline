@@ -1,5 +1,9 @@
 name: Weather Pipeline
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # ignore Node.js warning
+  DB_URL: ${{ secrets.DB_URL }}              # your Supabase connection string
+
 on:
   schedule:
     - cron: "0 * * * *"  # runs every hour
@@ -21,5 +25,5 @@ jobs:
       - name: Install dependencies
         run: pip install requests psycopg2-binary
 
-      - name: Run script
+      - name: Run weather pipeline
         run: python weather_pipeline.py
