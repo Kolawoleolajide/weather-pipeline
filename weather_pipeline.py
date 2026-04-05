@@ -6,7 +6,7 @@ import logging
 import time
 
 # --- CONFIG ---
-API_KEY = "YOUR_API_KEY"
+API_KEY = "bdf17317ccaa08f29bfabb76881e56c9"
 cities = ["Lagos", "Abuja", "Kano", "Port Harcourt"]
 DB_URL = os.getenv("DB_URL")
 
