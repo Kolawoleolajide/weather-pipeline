@@ -2,7 +2,8 @@ name: Weather Pipeline
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # ignore Node.js warning
-  DB_URL: ${{ secrets.DB_URL }}              # your Supabase connection string
+  DB_URL: ${{ secrets.DB_URL }}  # your Supabase connection string
+  API_KEY: ${{ secrets.API_KEY }} # My API key connecton string
 
 on:
   schedule:
